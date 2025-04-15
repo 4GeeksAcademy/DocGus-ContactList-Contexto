@@ -10,15 +10,15 @@ const contactList = [
 		email: "docgus@miemail.com",
 	},
 	{
-		name:"Maria Lopez",
+		name: "Maria Lopez",
 		address: "Malvinas 518",
 		phone: "5512345678",
 		email: "gohome@miemail.com",
 	},
 	{
-		name:"Juan Perez",
+		name: "Juan Perez",
 		address: "Calle Falsa 123",
-		phone: "5512345678",	
+		phone: "5512345678",
 		email: "getback@miemail.com",
 	}
 ];
@@ -31,9 +31,11 @@ export const Home = () => {
 		<div className="text-center mt-5">
 			<h1>AGENDA</h1>
 			<div className="container d-flex flex-column align-items-center">
-				<ContactCard contactou={contactList[0]} />
-				<ContactCard contactou={contactList[1]} />
-				<ContactCard contactou={contactList[2]}/>
+				{
+					contactList.map((contacti,indice)=>{
+						 return <ContactCard contactou={contacti} key={indice} />
+					})
+				}
 			</div>
 		</div>
 	);
