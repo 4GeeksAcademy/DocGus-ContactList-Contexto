@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 function ContactCard(props) {
     return (
         <div className="card mb-3 p-3" style={{ maxWidth: "540px" }}>
@@ -15,8 +17,8 @@ function ContactCard(props) {
                 </div>
                 <div
                     className="col-md-2 d-flex flex-row align-items-start mt-2 gap-1">
-                    <button className="btn btn-outline-primary"><i class="fa-regular fa-pen-to-square"></i></button>
-                    <button className="btn btn-outline-danger"><i class="fa-solid fa-trash-can"></i></button>
+                    <Link to={`/editar-contacto/${props.contactou.id}`} className="btn btn-outline-primary"><i className="fa-regular fa-pen-to-square"></i></Link>
+                    <button className="btn btn-outline-danger"><i className="fa-solid fa-trash-can"></i></button>
                 </div>
             </div>
         </div>
